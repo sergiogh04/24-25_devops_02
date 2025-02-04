@@ -30,11 +30,11 @@ jobs:
           push: true 
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/galeria:latest
 
-    aws:
-      name: Deploy image to aws
-      needs: build
-      runs-on: ubuntu-latest
-      steps:
+  aws:
+    name: Deploy image to aws
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v4
       - name: copy docker compose via ssh key
         uses: appleboy/scp-action@v0.1.7
