@@ -1,0 +1,11 @@
+version: "3.1"
+
+services:
+  galeria:
+    container_name: galeria
+    image: yelardo/testeoqueteveo:latest
+    ports:
+      - 80:5000
+    restart: always
+
+#dckr_pat__qB5SvDSkanpYIleOy0mfX4b5go
